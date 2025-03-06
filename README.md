@@ -6,11 +6,23 @@ This node.js package calculates and visualizes the mandelbrot set.  The computat
 is performed by the provided `mandelbrot.js` script, and the visualization is done
 in python by a `mandelbrot-plotter` script.
 
-### How to install
+### How to get this code
+Clone this repository by running:
 
 ```
-$ npm install commander
-$ npm install mathjs
+$ git clone https://github.com/raymenzel/mandelbrot.git
+$ cd mandelbrot
+```
+
+### How to install
+Inside the base of this repository run:
+
+```
+$ npm install
+$ python3 -m venv env
+$ source env/bin/activate # if in bash
+$ pip install --upgrade pip
+$ pip install ./visualize
 ```
 
 ### How to run
