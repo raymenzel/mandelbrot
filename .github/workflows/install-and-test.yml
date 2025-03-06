@@ -1,0 +1,32 @@
+name: install-and-test
+run-name: install-and-test
+
+on: [push]
+
+jobs:
+  install-and-test:
+    name: install-and-test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+        node-version: ["18.x", "20.x"]
+
+    steps:
+      - name : Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Set up python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install node package
+        run: npm install
+      - name: Install python package
+        run: pip install ./visualize
+      - name: Run the test
+        run: bash test/test.bash

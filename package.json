@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "commander": "^13.1.0",
+    "mathjs": "^14.3.0"
+  },
+  "name": "mandelbrot",
+  "version": "0.1.0",
+  "description": "Calculates the Mandelbrot set",
+  "main": "mandelbrot.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node mandelbrot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymenzel/mandelbrot).git"
+  },
+  "keywords": [
+    "node.js",
+    "mandelbrot"
+  ],
+  "author": "R. Menzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymenzel/mandelbrot)/issues"
+  },
+  "homepage": "https://github.com/raymenzel/mandelbrot)#readme"
+}
