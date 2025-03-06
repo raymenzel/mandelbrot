@@ -1,0 +1,28 @@
+[build-system]
+requires = [
+    "setuptools >= 40.9.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mandelbrot_plotter"
+version = "0.1"
+dependencies = [
+    "matplotlib",
+    "numpy",
+]
+requires-python = ">= 3.8"
+authors = [
+    {name = "R. Menzel"},
+]
+maintainers = [
+    {name = "R. Menzel", email="menzel@gmail.com"}
+]
+description = "Plots mandelbrot set by reading data from stdin."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python"
+]
+
+[project.scripts]
+mandelbrot-plotter = "mandelbrot_plotter.plotter:mandelbrot_set"
